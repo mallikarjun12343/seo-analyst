@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f4f6fb;
+    color: #333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10%;
+    background: #1d2671;
+}
+
+.logo {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Nav links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #ff69b4;
+}
+
+/* Social icons */
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #ff69b4;
+    transform: scale(1.2);
+}
+
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.profile-img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    margin-bottom: 20px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 30px;
+    background: #fff;
+    color: #c33764;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* SECTIONS */
+section {
+    padding: 70px 10%;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+}
+
+/* ABOUT */
+.about {
+    background: #fff;
+    text-align: center;
+}
+
+/* SKILLS */
+.skills {
+    background: #eef0ff;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+/* EXPERIENCE */
+.experience {
+    background: #fff;
+}
+
+.exp-card {
+    background: linear-gradient(135deg, #fdfbfb, #ebedee);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.exp-card h3 {
+    color: #1d2671;
+}
+
+/* BLOGS */
+/* BLOG SECTION */
+.blogs {
+    background: #eef0ff;
+    padding: 70px 10%;
+}
+
+.blogs h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+/* Blog Grid */
+.blog-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+/* Blog Card */
+.blog-card {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.blog-card img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Blog Text */
+.blog-content h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #1d2671;
+}
+
+.blog-content p {
+    font-size: 14px;
+    color: #555;
+}
+
+
+/* CONTACT SECTION */
+.contact {
+    background: #1d2671;
+    color: #fff;
+    text-align: center;
+    padding: 70px 10%;
+}
+
+.contact-details {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    align-items: center;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-row .label {
+    font-weight: bold;
+}
+
+.contact-row .value {
+    word-break: break-word;
+}
+
+/* LinkedIn link */
+.linkedin-text a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.linkedin-text a:hover {
+    color: #ff69b4;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+}
+/* LinkedIn link styling */
+.linkedin-text a {
+    color: #ffffff;           /* White color */
+    text-decoration: none;    /* Remove underline */
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.linkedin-text a:hover {
+    color: #ff69b4;           /* Pink color on hover */
+}
+
+/* Make entire blog card clickable */
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Hover effect for better UX */
+.blog-card {
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
