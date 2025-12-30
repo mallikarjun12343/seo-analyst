@@ -272,3 +272,45 @@ footer {
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
+
+/* Hamburger */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #1d2671;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        display: none;
+    }
+
+    /* Show menu on toggle */
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .social-icons {
+        margin-left: 10px;
+    }
+}
