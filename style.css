@@ -1,3 +1,4 @@
+/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +18,7 @@ body {
     align-items: center;
     padding: 15px 10%;
     background: #1d2671;
+    position: relative;
 }
 
 .logo {
@@ -25,7 +27,6 @@ body {
     font-weight: bold;
 }
 
-/* Nav links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -42,7 +43,6 @@ body {
     color: #ff69b4;
 }
 
-/* Social icons */
 .social-icons a {
     color: #fff;
     font-size: 20px;
@@ -55,6 +55,17 @@ body {
     transform: scale(1.2);
 }
 
+/* HAMBURGER */
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+}
 
 /* HERO */
 .hero {
@@ -75,7 +86,6 @@ body {
     margin-bottom: 20px;
 }
 
-/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -87,7 +97,7 @@ body {
     font-weight: bold;
 }
 
-/* SECTIONS */
+/* GLOBAL SECTIONS */
 section {
     padding: 70px 10%;
 }
@@ -126,13 +136,14 @@ h2 {
 /* EXPERIENCE */
 .experience {
     background: #fff;
+    padding-bottom: 40px; /* 🔥 reduced to avoid extra gap */
 }
 
 .exp-card {
     background: linear-gradient(135deg, #fdfbfb, #ebedee);
     padding: 30px;
     border-radius: 15px;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
@@ -140,27 +151,70 @@ h2 {
     color: #1d2671;
 }
 
+/* 🔥 KEYWORD RESULTS – FIXED SPACING */
+.keyword-results {
+    background: #ffffff;
+    padding: 40px 10%;   /* reduced top padding */
+    overflow: hidden;   /* prevents margin collapsing */
+}
+
+.keyword-results h2 {
+    margin: 0 0 10px 0; /* removes top space completely */
+}
+
+.section-desc {
+    text-align: center;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* TABLE */
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+}
+
+thead {
+    background: linear-gradient(135deg, #1d2671, #c33764);
+    color: #fff;
+}
+
+th, td {
+    padding: 14px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody tr:hover {
+    background: #f4f6fb;
+}
+
+td {
+    font-size: 14px;
+}
+
 /* BLOGS */
-/* BLOG SECTION */
 .blogs {
     background: #eef0ff;
-    padding: 70px 10%;
 }
 
-.blogs h2 {
-    text-align: center;
-    font-size: 32px;
-    margin-bottom: 40px;
-}
-
-/* Blog Grid */
 .blog-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 25px;
 }
 
-/* Blog Card */
+.blog-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .blog-card {
     background: #fff;
     display: flex;
@@ -169,11 +223,13 @@ h2 {
     padding: 20px;
     border-radius: 15px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .blog-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .blog-card img {
@@ -183,7 +239,6 @@ h2 {
     border-radius: 10px;
 }
 
-/* Blog Text */
 .blog-content h3 {
     font-size: 18px;
     margin-bottom: 8px;
@@ -195,13 +250,11 @@ h2 {
     color: #555;
 }
 
-
-/* CONTACT SECTION */
+/* CONTACT */
 .contact {
     background: #1d2671;
     color: #fff;
     text-align: center;
-    padding: 70px 10%;
 }
 
 .contact-details {
@@ -217,17 +270,8 @@ h2 {
     text-align: left;
 }
 
-.contact-row .label {
-    font-weight: bold;
-}
-
-.contact-row .value {
-    word-break: break-word;
-}
-
-/* LinkedIn link */
 .linkedin-text a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -243,49 +287,8 @@ footer {
     text-align: center;
     padding: 15px;
 }
-/* LinkedIn link styling */
-.linkedin-text a {
-    color: #ffffff;           /* White color */
-    text-decoration: none;    /* Remove underline */
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
 
-.linkedin-text a:hover {
-    color: #ff69b4;           /* Pink color on hover */
-}
-
-/* Make entire blog card clickable */
-.blog-link {
-    text-decoration: none;
-    color: inherit;
-    display: block;
-}
-
-/* Hover effect for better UX */
-.blog-card {
-    cursor: pointer;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.blog-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-/* Hamburger */
-#menu-toggle {
-    display: none;
-}
-
-.menu-icon {
-    display: none;
-    font-size: 24px;
-    color: #fff;
-    cursor: pointer;
-}
-
-/* Mobile View */
+/* MOBILE */
 @media (max-width: 768px) {
 
     .menu-icon {
@@ -305,12 +308,20 @@ footer {
         display: none;
     }
 
-    /* Show menu on toggle */
     #menu-toggle:checked ~ .nav-links {
         display: flex;
     }
 
-    .social-icons {
-        margin-left: 10px;
+    table {
+        font-size: 13px;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    .section-desc {
+        font-size: 14px;
+        padding: 0 10px;
     }
 }
